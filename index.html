@@ -18,262 +18,100 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { font-size: 14px; }
-  body {
-    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #333;
-    background: #fff;
-    font-weight: 400;
-  }
+  body { font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; background: #fff; font-weight: 400; }
   a { text-decoration: none; color: inherit; }
   ul { list-style: none; }
   img { max-width: 100%; display: block; }
-
-  /* ─── HEADER ─── */
-  .site-header {
-    background: #fff;
-    border-bottom: 1px solid #e8e8e8;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  .header-top-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 12px 20px;
-    gap: 16px;
-  }
+  .site-header { background: #fff; border-bottom: 1px solid #e8e8e8; position: sticky; top: 0; z-index: 100; }
+  .header-top-row { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 12px 20px; gap: 16px; }
   .header-left { flex: 1; }
-  .search-form {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    overflow: hidden;
-    max-width: 280px;
-  }
-  .search-form input {
-    border: none;
-    outline: none;
-    padding: 7px 10px;
-    font-family: inherit;
-    font-size: 13px;
-    flex: 1;
-    color: #555;
-  }
-  .search-form button {
-    border: none;
-    background: none;
-    cursor: pointer;
-    padding: 7px 10px;
-    color: #555;
-  }
+  .search-form { display: flex; align-items: center; border: 1px solid #ccc; border-radius: 2px; overflow: hidden; max-width: 280px; }
+  .search-form input { border: none; outline: none; padding: 7px 10px; font-family: inherit; font-size: 13px; flex: 1; color: #555; }
+  .search-form button { border: none; background: none; cursor: pointer; padding: 7px 10px; }
   .search-form button svg { display: block; width: 14px; height: 14px; fill: #555; }
   .header-logo { flex: 0 0 auto; text-align: center; }
   .header-logo img { height: 44px; width: auto; }
-  .header-right {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 18px;
-  }
-  .header-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3px;
-    font-size: 10px;
-    color: #555;
-    cursor: default;
-  }
+  .header-right { flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 18px; }
+  .header-icon { display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 10px; color: #555; cursor: default; }
   .header-icon svg { width: 18px; height: 18px; fill: #333; }
-
-  /* Desktop nav bar */
   .site-nav { border-top: 1px solid #e8e8e8; background: #fff; }
-  .nav-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    padding: 0 20px;
-  }
-  .nav-inner span {
-    display: block;
-    padding: 11px 22px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #333;
-    cursor: default;
-  }
-
-  /* ─── HERO SLIDER ─── */
+  .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; padding: 0 20px; }
+  .nav-inner span { display: block; padding: 11px 22px; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #333; cursor: default; }
   .hero-slider { position: relative; overflow: hidden; background: #f0ebe4; }
   .swiper { width: 100%; }
-  .hero-slider .swiper-slide img {
-    width: 100%; height: auto; display: block;
-    aspect-ratio: 4000/2667; object-fit: cover;
-  }
-  .swiper-button-next, .swiper-button-prev { color: rgba(255,255,255,0.85); width: 44px; height: 44px; }
+  .hero-slider .swiper-slide img { width: 100%; height: auto; display: block; aspect-ratio: 4000/2667; object-fit: cover; }
+  .swiper-button-next, .swiper-button-prev { color: rgba(255,255,255,0.85); }
   .swiper-button-next::after, .swiper-button-prev::after { font-size: 20px; font-weight: 700; }
   .swiper-pagination-bullet { background: #fff; opacity: 0.7; }
   .swiper-pagination-bullet-active { opacity: 1; }
-
-  /* ─── TAGLINE ─── */
-  .tagline-section { text-align: center; padding: 40px 20px 36px; background: #fff; }
-  .tagline-section h2 {
-    font-size: 22px; font-weight: 700;
-    letter-spacing: 0.06em; text-transform: uppercase; color: #222;
-  }
-
-  /* ─── PRODUCTS SECTION ─── */
-  .products-section {
-    max-width: 1200px; margin: 0 auto;
-    padding: 0 20px 40px; display: flex; gap: 28px; align-items: flex-start;
-  }
+  .tagline-section { text-align: center; padding: 40px 20px 36px; }
+  .tagline-section h2 { font-size: 22px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #222; }
+  .products-section { max-width: 1200px; margin: 0 auto; padding: 0 20px 40px; display: flex; gap: 28px; align-items: flex-start; }
   .sidebar { flex: 0 0 160px; padding-top: 4px; }
-  .sidebar-title {
-    font-size: 12px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.08em; color: #222; margin-bottom: 14px;
-  }
+  .sidebar-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #222; margin-bottom: 14px; }
   .sidebar ul li { margin-bottom: 8px; }
   .sidebar ul li span { font-size: 13px; color: #444; cursor: default; }
-
   .product-grid-wrap { flex: 1; }
   .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
   .product-card { cursor: default; }
   .product-card:hover .product-img-wrap img { transform: scale(1.04); }
-  .product-img-wrap { position: relative; overflow: hidden; background: #f7f5f2; }
-  .product-img-wrap img {
-    width: 100%; height: auto; display: block;
-    transition: transform 0.4s ease;
-    aspect-ratio: 2667/4000; object-fit: cover;
-  }
+  .product-img-wrap { overflow: hidden; background: #f7f5f2; }
+  .product-img-wrap img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; aspect-ratio: 2667/4000; object-fit: cover; }
   .product-info { padding: 10px 2px 6px; }
-  .product-name {
-    font-size: 11px; font-weight: 600; text-transform: uppercase;
-    letter-spacing: 0.06em; color: #222; line-height: 1.4; margin-bottom: 6px;
-  }
-  .product-price { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 3px; }
+  .product-name { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #222; line-height: 1.4; margin-bottom: 6px; }
+  .product-price { font-size: 14px; font-weight: 700; color: #111; }
   .price-na { color: #999; font-style: italic; font-size: 12px; }
-
-  /* CTA */
   .cta-wrap { text-align: center; margin-top: 32px; }
-  .btn-cta {
-    display: inline-block; background: #7a8c5e; color: #fff;
-    font-family: inherit; font-size: 12px; font-weight: 700;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    padding: 13px 36px; border: none; cursor: default;
-    transition: background 0.2s;
-  }
-
-  /* ─── LIFESTYLE BANNER ─── */
+  .btn-cta { display: inline-block; background: #7a8c5e; color: #fff; font-family: inherit; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 13px 36px; border: none; cursor: default; }
   .lifestyle-banner { width: 100%; overflow: hidden; background: #e8e0d5; }
   .lifestyle-banner img { width: 100%; height: auto; display: block; }
-
-  /* ─── INSTAGRAM SECTION ─── */
-  .instagram-section { text-align: center; padding: 44px 20px 40px; background: #fff; }
-  .instagram-section a {
-    display: inline-flex; align-items: center; gap: 14px;
-    color: #222; text-decoration: none;
-  }
+  .instagram-section { text-align: center; padding: 44px 20px 40px; }
+  .instagram-section a { display: inline-flex; align-items: center; gap: 14px; color: #222; }
   .instagram-section svg { width: 48px; height: 48px; fill: #222; }
-  .instagram-section .ig-text { text-align: left; }
-  .instagram-section .ig-label {
-    font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: #666;
-  }
-  .instagram-section .ig-handle {
-    font-size: 20px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.04em; color: #222;
-  }
-
-  /* ─── SERVICES STRIP ─── */
-  .services-strip {
-    background: #fff; border-top: 1px solid #e8e8e8;
-    border-bottom: 1px solid #e8e8e8; padding: 28px 20px;
-  }
-  .services-inner {
-    max-width: 900px; margin: 0 auto;
-    display: flex; justify-content: space-around; gap: 20px;
-  }
+  .instagram-section .ig-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: #666; }
+  .instagram-section .ig-handle { font-size: 20px; font-weight: 700; text-transform: uppercase; color: #222; }
+  .services-strip { background: #fff; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; padding: 28px 20px; }
+  .services-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-around; gap: 20px; }
   .service-item { display: flex; align-items: center; gap: 12px; flex: 1; justify-content: center; }
   .service-item svg { width: 36px; height: 36px; fill: #333; flex-shrink: 0; }
-  .service-text h3 {
-    font-size: 12px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.06em; color: #222;
-  }
+  .service-text h3 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #222; }
   .service-text p { font-size: 12px; color: #666; margin-top: 2px; }
 
-  /* ─── FOOTER ─── */
+  /* FORMULARIO */
+  .contact-form-section { background: #f7f5f2; padding: 56px 20px; }
+  .contact-form-inner { max-width: 620px; margin: 0 auto; }
+  .contact-form-section h2 { font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #222; text-align: center; margin-bottom: 32px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .form-field { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+  .form-field label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #555; }
+  .form-field input, .form-field textarea { font-family: inherit; font-size: 13px; color: #333; background: #fff; border: 1px solid #ddd; padding: 10px 12px; outline: none; transition: border-color 0.2s; width: 100%; }
+  .form-field input:focus, .form-field textarea:focus { border-color: #7a8c5e; }
+  .form-field textarea { resize: vertical; min-height: 100px; }
+  .btn-consultar { display: block; width: 100%; background: #7a8c5e; color: #fff; font-family: inherit; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px; border: none; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
+  .btn-consultar:hover { background: #6a7a50; }
+
   .site-footer { background: #2c2c2c; color: #ccc; padding: 44px 20px 0; }
-  .footer-inner {
-    max-width: 1200px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 2fr 1.5fr 1.5fr;
-    gap: 32px; padding-bottom: 36px; border-bottom: 1px solid #444;
-  }
-  .footer-col-title {
-    font-size: 11px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.12em; color: #fff; margin-bottom: 16px;
-  }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr 1.5fr 1.5fr; gap: 32px; padding-bottom: 36px; border-bottom: 1px solid #444; }
+  .footer-col-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #fff; margin-bottom: 16px; }
   .footer-col ul li { margin-bottom: 8px; }
   .footer-col ul li span { font-size: 13px; color: #aaa; cursor: default; }
-
   .payment-logos { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
   .payment-logos img { height: 22px; width: auto; filter: brightness(0.85); border-radius: 2px; }
-
-  .contact-list li {
-    display: flex; align-items: flex-start; gap: 8px;
-    margin-bottom: 10px; font-size: 13px; color: #aaa;
-  }
+  .contact-list li { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 10px; font-size: 13px; color: #aaa; }
   .contact-list li svg { width: 14px; height: 14px; fill: #aaa; margin-top: 2px; flex-shrink: 0; }
   .contact-list li a { color: #aaa; }
   .contact-list li a:hover { color: #fff; }
-
   .social-icons { display: flex; gap: 10px; margin-bottom: 20px; }
-  .social-icons a {
-    width: 34px; height: 34px; border: 1px solid #555; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center; transition: border-color 0.2s;
-  }
+  .social-icons a { width: 34px; height: 34px; border: 1px solid #555; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: border-color 0.2s; }
   .social-icons a:hover { border-color: #fff; }
   .social-icons svg { width: 15px; height: 15px; fill: #aaa; }
-
   .newsletter-form { display: flex; margin-top: 14px; }
-  .newsletter-form input {
-    flex: 1; padding: 9px 12px; font-size: 12px; font-family: inherit;
-    background: #3a3a3a; border: 1px solid #555; border-right: none;
-    color: #ccc; outline: none;
-  }
-  .newsletter-form input::placeholder { color: #888; }
-  .newsletter-form button {
-    background: #7a8c5e; border: none; color: #fff;
-    padding: 9px 14px; font-size: 11px; font-family: inherit;
-    font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
-    cursor: pointer; white-space: nowrap;
-  }
-  .newsletter-form button:hover { background: #6a7a50; }
-
-  .footer-bottom {
-    max-width: 1200px; margin: 0 auto; padding: 16px 0;
-    display: flex; align-items: center; justify-content: space-between;
-    font-size: 12px; color: #777;
-  }
-  .footer-bottom span { color: #777; }
-
-  /* ─── WHATSAPP FLOAT ─── */
-  .whatsapp-btn {
-    position: fixed; bottom: 24px; right: 24px;
-    width: 56px; height: 56px; background: #25D366; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 200; transition: transform 0.2s;
-  }
+  .newsletter-form input { flex: 1; padding: 9px 12px; font-size: 12px; font-family: inherit; background: #3a3a3a; border: 1px solid #555; border-right: none; color: #ccc; outline: none; }
+  .newsletter-form button { background: #7a8c5e; border: none; color: #fff; padding: 9px 14px; font-size: 11px; font-family: inherit; font-weight: 700; text-transform: uppercase; cursor: pointer; }
+  .footer-bottom { max-width: 1200px; margin: 0 auto; padding: 16px 0; display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: #777; }
+  .whatsapp-btn { position: fixed; bottom: 24px; right: 24px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 200; transition: transform 0.2s; }
   .whatsapp-btn:hover { transform: scale(1.08); }
   .whatsapp-btn svg { width: 30px; height: 30px; fill: #fff; }
-
-  /* ─── RESPONSIVE ─── */
   @media (max-width: 900px) {
     .product-grid { grid-template-columns: repeat(2, 1fr); }
     .products-section { flex-direction: column; }
@@ -284,28 +122,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .product-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
     .services-inner { flex-direction: column; align-items: flex-start; gap: 18px; }
     .footer-inner { grid-template-columns: 1fr; }
-    .header-top-row { flex-wrap: wrap; }
-    .search-form { max-width: 100%; }
+    .form-row { grid-template-columns: 1fr; }
     .tagline-section h2 { font-size: 16px; }
   }
 </style>
 </head>
 <body>
-
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNCNDZR6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNCNDZR6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<!-- HEADER -->
 <header class="site-header">
   <div class="header-top-row">
     <div class="header-left">
       <form class="search-form" action="#" onsubmit="return false;">
-        <input type="search" name="q" placeholder="Buscar"/>
-        <button type="submit" aria-label="Buscar">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"/></svg>
-        </button>
+        <input type="search" placeholder="Buscar"/>
+        <button type="submit" aria-label="Buscar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"/></svg></button>
       </form>
     </div>
     <div class="header-logo">
@@ -324,29 +156,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <nav class="site-nav">
     <div class="nav-inner">
-      <span>INICIO</span>
-      <span>PRODUCTOS</span>
-      <span>CONTACTO</span>
+      <span>INICIO</span><span>PRODUCTOS</span><span>CONTACTO</span>
     </div>
   </nav>
 </header>
 
-<!-- HERO SLIDER -->
 <section class="hero-slider">
   <div class="swiper js-hero-swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="https://acdn-us.mitiendanube.com/stores/137/507/themes/new_linkedman/2-slide-1775851175031-8080747268-d0df3209e3ce4b9251f6d9e0d4f7e0d61775851176-1920-1920.webp?3441567124291976471" alt="Carrusel HILO argentina" loading="eager"/>
-      </div>
-      <div class="swiper-slide">
-        <img src="https://acdn-us.mitiendanube.com/stores/137/507/themes/new_linkedman/2-slide-1775834437185-3237797106-075b1f3554d489d6b9ea0bca5855c0e11775834439-1920-1920.webp?3441567124291976471" alt="Carrusel HILO argentina" loading="lazy"/>
-      </div>
-      <div class="swiper-slide">
-        <img src="https://acdn-us.mitiendanube.com/stores/137/507/themes/new_linkedman/2-slide-1775834437186-8520304467-c85ce6c6f1c0d2d2d26cc82abc8a63b11775834441-1920-1920.webp?3441567124291976471" alt="Carrusel HILO argentina" loading="lazy"/>
-      </div>
-      <div class="swiper-slide">
-        <img src="https://acdn-us.mitiendanube.com/stores/137/507/themes/new_linkedman/2-slide-1775834437186-2795810426-fb58f62f66529ed440fd86f346a702091775834441-1920-1920.webp?3441567124291976471" alt="Carrusel HILO argentina" loading="lazy"/>
-      </div>
+      <div class="swiper-slide"><img src="https://acdn-us.mitiendanube.com/stores/137/507/themes/new_linkedman/2-slide-1775851175031-8080747268-d0df3209e3ce4b9251f6d9e0d4f7e0d61775851176-1920-1920.webp?3441567124291976471" alt="Carrusel HILO argentina" loading="eager"/></div>
+      <div class="swiper-slide"><img src="https://acdn-us.mitiendanube.com/stores/137/507/themes/new_linkedman/2-slide-1775834437185-3237797106-075b1f3554d489d6b9ea0bca5855c0e11775834439-1920-1920.webp?3441567124291976471" alt="Carrusel HILO argentina" loading="lazy"/></div>
+      <div class="swiper-slide"><img src="https://acdn-us.mitiendanube.com/stores/137/507/themes/new_linkedman/2-slide-1775834437186-8520304467-c85ce6c6f1c0d2d2d26cc82abc8a63b11775834441-1920-1920.webp?3441567124291976471" alt="Carrusel HILO argentina" loading="lazy"/></div>
+      <div class="swiper-slide"><img src="https://acdn-us.mitiendanube.com/stores/137/507/themes/new_linkedman/2-slide-1775834437186-2795810426-fb58f62f66529ed440fd86f346a702091775834441-1920-1920.webp?3441567124291976471" alt="Carrusel HILO argentina" loading="lazy"/></div>
     </div>
     <div class="swiper-pagination"></div>
     <div class="swiper-button-prev"></div>
@@ -354,12 +175,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- TAGLINE -->
 <section class="tagline-section">
   <h2>Hilos entrelazados en todas sus formas.</h2>
 </section>
 
-<!-- PRODUCTS -->
 <section class="products-section">
   <aside class="sidebar">
     <p class="sidebar-title">Categorías principales</p>
@@ -372,106 +191,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><span>SALE -30%</span></li>
     </ul>
   </aside>
-
   <div class="product-grid-wrap">
     <div class="product-grid">
-
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2622215-3b96184eed98a9d8be17758370957328-480-0.webp" alt="Cover Patch" loading="lazy"/>
-        </div>
-        <div class="product-info">
-          <p class="product-name">Cover Patch</p>
-          <p class="product-price">$185.000</p>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2622048-1aec9aa1fe36ef4d7717758499861227-480-0.webp" alt="Alfombras de lana" loading="lazy"/>
-        </div>
-        <div class="product-info">
-          <p class="product-name">Alfombras de lana</p>
-          <p class="price-na">Consultar precio</p>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2621948-8a722f85b931fa0ef217756602051342-480-0.webp" alt="Funda de almohadón Mediterráneo #2" loading="lazy"/>
-        </div>
-        <div class="product-info">
-          <p class="product-name">Funda de almohadón Mediterráneo #2</p>
-          <p class="product-price">$198.000</p>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2622171-09d09d626ab51facbf17756642905136-480-0.webp" alt="Funda de almohadón Marsella" loading="lazy"/>
-        </div>
-        <div class="product-info">
-          <p class="product-name">Funda de almohadón Marsella</p>
-          <p class="product-price">$62.600</p>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2622504-eb2d5e816b45590dc117756695010012-480-0.webp" alt="Alfombra polipropileno espigada roja" loading="lazy"/>
-        </div>
-        <div class="product-info">
-          <p class="product-name">Alfombra polipropileno espigada roja</p>
-          <p class="price-na">Consultar precio</p>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2621966-c300da5f39dd3350c117756604784451-480-0.webp" alt="Funda de almohadón Niza" loading="lazy"/>
-        </div>
-        <div class="product-info">
-          <p class="product-name">Funda de almohadón Niza</p>
-          <p class="product-price">$62.600</p>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2621897-e56451206ca51c78de17756593316198-480-0.webp" alt="Funda positano con fuelle del lino" loading="lazy"/>
-        </div>
-        <div class="product-info">
-          <p class="product-name">Funda de almohadón positano con fuelle del lino</p>
-          <p class="product-price">$108.000</p>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2622161-0332929b4b373f60b117756632524958-480-0.webp" alt="Manta Duo" loading="lazy"/>
-        </div>
-        <div class="product-info">
-          <p class="product-name">Manta Duo</p>
-          <p class="product-price">$110.000</p>
-        </div>
-      </div>
-
+      <div class="product-card"><div class="product-img-wrap"><img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2622215-3b96184eed98a9d8be17758370957328-480-0.webp" alt="Cover Patch" loading="lazy"/></div><div class="product-info"><p class="product-name">Cover Patch</p><p class="product-price">$185.000</p></div></div>
+      <div class="product-card"><div class="product-img-wrap"><img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2622048-1aec9aa1fe36ef4d7717758499861227-480-0.webp" alt="Alfombras de lana" loading="lazy"/></div><div class="product-info"><p class="product-name">Alfombras de lana</p><p class="price-na">Consultar precio</p></div></div>
+      <div class="product-card"><div class="product-img-wrap"><img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2621948-8a722f85b931fa0ef217756602051342-480-0.webp" alt="Funda Mediterráneo" loading="lazy"/></div><div class="product-info"><p class="product-name">Funda de almohadón Mediterráneo #2</p><p class="product-price">$198.000</p></div></div>
+      <div class="product-card"><div class="product-img-wrap"><img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2622171-09d09d626ab51facbf17756642905136-480-0.webp" alt="Funda Marsella" loading="lazy"/></div><div class="product-info"><p class="product-name">Funda de almohadón Marsella</p><p class="product-price">$62.600</p></div></div>
+      <div class="product-card"><div class="product-img-wrap"><img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2622504-eb2d5e816b45590dc117756695010012-480-0.webp" alt="Alfombra espigada" loading="lazy"/></div><div class="product-info"><p class="product-name">Alfombra polipropileno espigada roja</p><p class="price-na">Consultar precio</p></div></div>
+      <div class="product-card"><div class="product-img-wrap"><img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2621966-c300da5f39dd3350c117756604784451-480-0.webp" alt="Funda Niza" loading="lazy"/></div><div class="product-info"><p class="product-name">Funda de almohadón Niza</p><p class="product-price">$62.600</p></div></div>
+      <div class="product-card"><div class="product-img-wrap"><img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2621897-e56451206ca51c78de17756593316198-480-0.webp" alt="Funda Positano" loading="lazy"/></div><div class="product-info"><p class="product-name">Funda de almohadón positano con fuelle del lino</p><p class="product-price">$108.000</p></div></div>
+      <div class="product-card"><div class="product-img-wrap"><img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2622161-0332929b4b373f60b117756632524958-480-0.webp" alt="Manta Duo" loading="lazy"/></div><div class="product-info"><p class="product-name">Manta Duo</p><p class="product-price">$110.000</p></div></div>
     </div>
-
-    <div class="cta-wrap">
-      <span class="btn-cta">Ver todos los productos</span>
-    </div>
+    <div class="cta-wrap"><span class="btn-cta">Ver todos los productos</span></div>
   </div>
 </section>
 
-<!-- LIFESTYLE BANNER -->
 <section class="lifestyle-banner">
   <img src="https://acdn-us.mitiendanube.com/stores/137/507/themes/new_linkedman/2-img-3978810387310792136-1775849710-89e65de1f25974af212c1668b5670e8c1775849711-1920-1920.webp?3441567124291976471" alt="Banner HILO argentina" loading="lazy"/>
 </section>
 
-<!-- INSTAGRAM — único enlace externo que se mantiene -->
 <section class="instagram-section">
-  <a href="https://instagram.com/hiloargentina" target="_blank" rel="noopener" aria-label="Instagram de HILO argentina">
+  <a href="https://instagram.com/hiloargentina" target="_blank" rel="noopener">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
     <div class="ig-text">
       <div class="ig-label">Seguinos en Instagram</div>
@@ -480,7 +220,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
 </section>
 
-<!-- SERVICES STRIP -->
 <div class="services-strip">
   <div class="services-inner">
     <div class="service-item">
@@ -498,19 +237,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<!-- FOOTER -->
+<!-- FORMULARIO DE CONSULTA -->
+<section class="contact-form-section">
+  <div class="contact-form-inner">
+    <h2>Hacé tu consulta</h2>
+    <div class="form-row">
+      <div class="form-field">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="Tu nombre"/>
+      </div>
+      <div class="form-field">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" placeholder="Tu apellido"/>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field">
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" placeholder="Ej: 11 1234-5678"/>
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="tu@email.com"/>
+      </div>
+    </div>
+    <div class="form-field">
+      <label for="consulta">Consulta</label>
+      <textarea id="consulta" placeholder="Escribi tu consulta aca..."></textarea>
+    </div>
+    <button class="btn-consultar" onclick="window.location.href='https://www.hiloargentina.com.ar/'">Consultar</button>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="footer-inner">
-
     <div class="footer-col">
-      <p class="footer-col-title">Navegación</p>
+      <p class="footer-col-title">Navegacion</p>
       <ul>
         <li><span>Inicio</span></li>
         <li><span>Productos</span></li>
         <li><span>Contacto</span></li>
       </ul>
     </div>
-
     <div class="footer-col">
       <p class="footer-col-title">Medios de pago</p>
       <div class="payment-logos">
@@ -520,21 +288,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png" alt="Diners" loading="lazy"/>
         <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png" alt="Cabal" loading="lazy"/>
         <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png" alt="Naranja" loading="lazy"/>
-        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-shopping@2x.png" alt="Shopping" loading="lazy"/>
         <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/maestro@2x.png" alt="Maestro" loading="lazy"/>
-        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visadebit@2x.png" alt="Visa Débito" loading="lazy"/>
-        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png" alt="Pago Fácil" loading="lazy"/>
+        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visadebit@2x.png" alt="Visa Debito" loading="lazy"/>
+        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png" alt="Pago Facil" loading="lazy"/>
         <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png" alt="Rapipago" loading="lazy"/>
         <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/argencard@2x.png" alt="Argencard" loading="lazy"/>
       </div>
     </div>
-
     <div class="footer-col">
       <p class="footer-col-title">Contactanos</p>
       <ul class="contact-list">
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476.5 22.9L382.3 1.2c-21.6-5-43.6 6.2-52.3 26.6l-43.5 101.5c-8 18.6-2.6 40.6 13.1 53.4l40 32.7C311 267.8 267.8 311 215.4 339.5l-32.7-40c-12.8-15.7-34.8-21.1-53.4-13.1L27.7 329.9c-20.4 8.7-31.5 30.7-26.6 52.3l21.7 94.2c4.8 20.9 23.2 35.5 44.6 35.5C312.3 512 512 313.7 512 67.5c0-21.4-14.6-39.8-35.5-44.6z"/></svg>
-          <!-- WhatsApp: enlace externo permitido -->
           <a href="https://wa.me/5491128880161" target="_blank">Whatsapp +54 9 1128880161</a>
         </li>
         <li>
@@ -547,11 +312,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </li>
       </ul>
     </div>
-
     <div class="footer-col">
       <p class="footer-col-title">Redes Sociales</p>
       <div class="social-icons">
-        <!-- Instagram: enlace externo permitido -->
         <a href="https://instagram.com/hiloargentina" target="_blank" aria-label="Instagram">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
         </a>
@@ -560,21 +323,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
       </div>
       <p class="footer-col-title" style="margin-top:8px;">Newsletter</p>
-      <form class="newsletter-form" onsubmit="return false;">
-        <input type="email" name="email" placeholder="Email" aria-label="Email"/>
-        <button type="submit">Suscribirse</button>
-      </form>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Email"/>
+        <button type="button">Suscribirse</button>
+      </div>
     </div>
-
   </div>
-
   <div class="footer-bottom">
-    <span>© 2026 HILO argentina. Todos los derechos reservados.</span>
+    <span>2026 HILO argentina. Todos los derechos reservados.</span>
     <span>Creado con Tiendanube</span>
   </div>
 </footer>
 
-<!-- WHATSAPP FLOAT — enlace externo permitido -->
 <a class="whatsapp-btn" href="https://wa.me/5491128880161" target="_blank" aria-label="WhatsApp">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
 </a>
@@ -582,8 +342,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script>
   new Swiper('.js-hero-swiper', {
-    loop: true,
-    speed: 600,
+    loop: true, speed: 600,
     autoplay: { delay: 4500, disableOnInteraction: false },
     pagination: { el: '.swiper-pagination', clickable: true },
     navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
