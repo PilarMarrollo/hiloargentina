@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NN6W6G6Z');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tienda Online de HILO argentina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 14px; }
+  body {
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    background: #fff;
+    font-weight: 400;
+  }
+  a { text-decoration: none; color: inherit; }
+  ul { list-style: none; }
+  img { max-width: 100%; display: block; }
+
+  /* ─── HEADER ─── */
+  .site-header {
+    background: #fff;
+    border-bottom: 1px solid #e8e8e8;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    gap: 16px;
+  }
+  .header-left { flex: 1; }
+  .search-form {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    overflow: hidden;
+    max-width: 280px;
+  }
+  .search-form input {
+    border: none;
+    outline: none;
+    padding: 7px 10px;
+    font-family: inherit;
+    font-size: 13px;
+    flex: 1;
+    color: #555;
+  }
+  .search-form button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 7px 10px;
+    color: #555;
+  }
+  .search-form button svg { display: block; width: 14px; height: 14px; fill: #555; }
+  .header-logo { flex: 0 0 auto; text-align: center; }
+  .header-logo img { height: 44px; width: auto; }
+  .header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 18px;
+  }
+  .header-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    font-size: 10px;
+    color: #555;
+    cursor: default;
+  }
+  .header-icon svg { width: 18px; height: 18px; fill: #333; }
+
+  /* Desktop nav bar */
+  .site-nav { border-top: 1px solid #e8e8e8; background: #fff; }
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+  }
+  .nav-inner span {
+    display: block;
+    padding: 11px 22px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #333;
+    cursor: default;
+  }
+
+  /* ─── HERO SLIDER ─── */
+  .hero-slider { position: relative; overflow: hidden; background: #f0ebe4; }
+  .swiper { width: 100%; }
+  .hero-slider .swiper-slide img {
+    width: 100%; height: auto; display: block;
+    aspect-ratio: 4000/2667; object-fit: cover;
+  }
+  .swiper-button-next, .swiper-button-prev { color: rgba(255,255,255,0.85); width: 44px; height: 44px; }
+  .swiper-button-next::after, .swiper-button-prev::after { font-size: 20px; font-weight: 700; }
+  .swiper-pagination-bullet { background: #fff; opacity: 0.7; }
+  .swiper-pagination-bullet-active { opacity: 1; }
+
+  /* ─── TAGLINE ─── */
+  .tagline-section { text-align: center; padding: 40px 20px 36px; background: #fff; }
+  .tagline-section h2 {
+    font-size: 22px; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase; color: #222;
+  }
+
+  /* ─── PRODUCTS SECTION ─── */
+  .products-section {
+    max-width: 1200px; margin: 0 auto;
+    padding: 0 20px 40px; display: flex; gap: 28px; align-items: flex-start;
+  }
+  .sidebar { flex: 0 0 160px; padding-top: 4px; }
+  .sidebar-title {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: #222; margin-bottom: 14px;
+  }
+  .sidebar ul li { margin-bottom: 8px; }
+  .sidebar ul li span { font-size: 13px; color: #444; cursor: default; }
+
+  .product-grid-wrap { flex: 1; }
+  .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .product-card { cursor: default; }
+  .product-card:hover .product-img-wrap img { transform: scale(1.04); }
+  .product-img-wrap { position: relative; overflow: hidden; background: #f7f5f2; }
+  .product-img-wrap img {
+    width: 100%; height: auto; display: block;
+    transition: transform 0.4s ease;
+    aspect-ratio: 2667/4000; object-fit: cover;
+  }
+  .product-info { padding: 10px 2px 6px; }
+  .product-name {
+    font-size: 11px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.06em; color: #222; line-height: 1.4; margin-bottom: 6px;
+  }
+  .product-price { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 3px; }
+  .price-na { color: #999; font-style: italic; font-size: 12px; }
+
+  /* CTA */
+  .cta-wrap { text-align: center; margin-top: 32px; }
+  .btn-cta {
+    display: inline-block; background: #7a8c5e; color: #fff;
+    font-family: inherit; font-size: 12px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 13px 36px; border: none; cursor: default;
+    transition: background 0.2s;
+  }
+
+  /* ─── LIFESTYLE BANNER ─── */
+  .lifestyle-banner { width: 100%; overflow: hidden; background: #e8e0d5; }
+  .lifestyle-banner img { width: 100%; height: auto; display: block; }
+
+  /* ─── INSTAGRAM SECTION ─── */
+  .instagram-section { text-align: center; padding: 44px 20px 40px; background: #fff; }
+  .instagram-section a {
+    display: inline-flex; align-items: center; gap: 14px;
+    color: #222; text-decoration: none;
+  }
+  .instagram-section svg { width: 48px; height: 48px; fill: #222; }
+  .instagram-section .ig-text { text-align: left; }
+  .instagram-section .ig-label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: #666;
+  }
+  .instagram-section .ig-handle {
+    font-size: 20px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.04em; color: #222;
+  }
+
+  /* ─── SERVICES STRIP ─── */
+  .services-strip {
+    background: #fff; border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8; padding: 28px 20px;
+  }
+  .services-inner {
+    max-width: 900px; margin: 0 auto;
+    display: flex; justify-content: space-around; gap: 20px;
+  }
+  .service-item { display: flex; align-items: center; gap: 12px; flex: 1; justify-content: center; }
+  .service-item svg { width: 36px; height: 36px; fill: #333; flex-shrink: 0; }
+  .service-text h3 {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.06em; color: #222;
+  }
+  .service-text p { font-size: 12px; color: #666; margin-top: 2px; }
+
+  /* ─── FOOTER ─── */
+  .site-footer { background: #2c2c2c; color: #ccc; padding: 44px 20px 0; }
+  .footer-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 2fr 1.5fr 1.5fr;
+    gap: 32px; padding-bottom: 36px; border-bottom: 1px solid #444;
+  }
+  .footer-col-title {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.12em; color: #fff; margin-bottom: 16px;
+  }
+  .footer-col ul li { margin-bottom: 8px; }
+  .footer-col ul li span { font-size: 13px; color: #aaa; cursor: default; }
+
+  .payment-logos { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .payment-logos img { height: 22px; width: auto; filter: brightness(0.85); border-radius: 2px; }
+
+  .contact-list li {
+    display: flex; align-items: flex-start; gap: 8px;
+    margin-bottom: 10px; font-size: 13px; color: #aaa;
+  }
+  .contact-list li svg { width: 14px; height: 14px; fill: #aaa; margin-top: 2px; flex-shrink: 0; }
+  .contact-list li a { color: #aaa; }
+  .contact-list li a:hover { color: #fff; }
+
+  .social-icons { display: flex; gap: 10px; margin-bottom: 20px; }
+  .social-icons a {
+    width: 34px; height: 34px; border: 1px solid #555; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; transition: border-color 0.2s;
+  }
+  .social-icons a:hover { border-color: #fff; }
+  .social-icons svg { width: 15px; height: 15px; fill: #aaa; }
+
+  .newsletter-form { display: flex; margin-top: 14px; }
+  .newsletter-form input {
+    flex: 1; padding: 9px 12px; font-size: 12px; font-family: inherit;
+    background: #3a3a3a; border: 1px solid #555; border-right: none;
+    color: #ccc; outline: none;
+  }
+  .newsletter-form input::placeholder { color: #888; }
+  .newsletter-form button {
+    background: #7a8c5e; border: none; color: #fff;
+    padding: 9px 14px; font-size: 11px; font-family: inherit;
+    font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+    cursor: pointer; white-space: nowrap;
+  }
+  .newsletter-form button:hover { background: #6a7a50; }
+
+  .footer-bottom {
+    max-width: 1200px; margin: 0 auto; padding: 16px 0;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 12px; color: #777;
+  }
+  .footer-bottom span { color: #777; }
+
+  /* ─── WHATSAPP FLOAT ─── */
+  .whatsapp-btn {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 56px; height: 56px; background: #25D366; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 200; transition: transform 0.2s;
+  }
+  .whatsapp-btn:hover { transform: scale(1.08); }
+  .whatsapp-btn svg { width: 30px; height: 30px; fill: #fff; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+    .products-section { flex-direction: column; }
+    .sidebar { flex: none; width: 100%; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .product-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .services-inner { flex-direction: column; align-items: flex-start; gap: 18px; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .header-top-row { flex-wrap: wrap; }
+    .search-form { max-width: 100%; }
+    .tagline-section h2 { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN6W6G6Z"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-top-row">
+    <div class="header-left">
+      <form class="search-form" action="#" onsubmit="return false;">
+        <input type="search" name="q" placeholder="Buscar"/>
+        <button type="submit" aria-label="Buscar">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"/></svg>
+        </button>
+      </form>
+    </div>
+    <div class="header-logo">
+      <img src="https://acdn-us.mitiendanube.com/stores/137/507/themes/common/logo-1941929647-1490473223-7c89737fcc84241da6cd272dae366d151512280999-480-0.webp" alt="HILO argentina" height="44"/>
+    </div>
+    <div class="header-right">
+      <div class="header-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg>
+        <span>Mi cuenta</span>
+      </div>
+      <div class="header-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-7.069-29.319-22.326-29.319H205.375l-6.286-32h293.813c11.818 0 22.218-8.43 24.932-19.681z"/></svg>
+        <span>Carrito</span>
+      </div>
+    </div>
+  </div>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <span>INICIO</span>
+      <span>PRODUCTOS</span>
+      <span>CONTACTO</span>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO SLIDER -->
+<section class="hero-slider">
+  <div class="swiper js-hero-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://acdn-us.mitiendanube.com/stores/137/507/themes/new_linkedman/2-slide-1775851175031-8080747268-d0df3209e3ce4b9251f6d9e0d4f7e0d61775851176-1920-1920.webp?3441567124291976471" alt="Carrusel HILO argentina" loading="eager"/>
+      </div>
+      <div class="swiper-slide">
+        <img src="https://acdn-us.mitiendanube.com/stores/137/507/themes/new_linkedman/2-slide-1775834437185-3237797106-075b1f3554d489d6b9ea0bca5855c0e11775834439-1920-1920.webp?3441567124291976471" alt="Carrusel HILO argentina" loading="lazy"/>
+      </div>
+      <div class="swiper-slide">
+        <img src="https://acdn-us.mitiendanube.com/stores/137/507/themes/new_linkedman/2-slide-1775834437186-8520304467-c85ce6c6f1c0d2d2d26cc82abc8a63b11775834441-1920-1920.webp?3441567124291976471" alt="Carrusel HILO argentina" loading="lazy"/>
+      </div>
+      <div class="swiper-slide">
+        <img src="https://acdn-us.mitiendanube.com/stores/137/507/themes/new_linkedman/2-slide-1775834437186-2795810426-fb58f62f66529ed440fd86f346a702091775834441-1920-1920.webp?3441567124291976471" alt="Carrusel HILO argentina" loading="lazy"/>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<!-- TAGLINE -->
+<section class="tagline-section">
+  <h2>Hilos entrelazados en todas sus formas.</h2>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products-section">
+  <aside class="sidebar">
+    <p class="sidebar-title">Categorías principales</p>
+    <ul>
+      <li><span>Colección 2026</span></li>
+      <li><span>Alfombras</span></li>
+      <li><span>Trabajos a medida</span></li>
+      <li><span>Muebles</span></li>
+      <li><span>Catálogo Textil Online</span></li>
+      <li><span>SALE -30%</span></li>
+    </ul>
+  </aside>
+
+  <div class="product-grid-wrap">
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2622215-3b96184eed98a9d8be17758370957328-480-0.webp" alt="Cover Patch" loading="lazy"/>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Cover Patch</p>
+          <p class="product-price">$185.000</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2622048-1aec9aa1fe36ef4d7717758499861227-480-0.webp" alt="Alfombras de lana" loading="lazy"/>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Alfombras de lana</p>
+          <p class="price-na">Consultar precio</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2621948-8a722f85b931fa0ef217756602051342-480-0.webp" alt="Funda de almohadón Mediterráneo #2" loading="lazy"/>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Funda de almohadón Mediterráneo #2</p>
+          <p class="product-price">$198.000</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2622171-09d09d626ab51facbf17756642905136-480-0.webp" alt="Funda de almohadón Marsella" loading="lazy"/>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Funda de almohadón Marsella</p>
+          <p class="product-price">$62.600</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2622504-eb2d5e816b45590dc117756695010012-480-0.webp" alt="Alfombra polipropileno espigada roja" loading="lazy"/>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Alfombra polipropileno espigada roja</p>
+          <p class="price-na">Consultar precio</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2621966-c300da5f39dd3350c117756604784451-480-0.webp" alt="Funda de almohadón Niza" loading="lazy"/>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Funda de almohadón Niza</p>
+          <p class="product-price">$62.600</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2621897-e56451206ca51c78de17756593316198-480-0.webp" alt="Funda positano con fuelle del lino" loading="lazy"/>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Funda de almohadón positano con fuelle del lino</p>
+          <p class="product-price">$108.000</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://acdn-us.mitiendanube.com/stores/137/507/products/hilo_2622161-0332929b4b373f60b117756632524958-480-0.webp" alt="Manta Duo" loading="lazy"/>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Manta Duo</p>
+          <p class="product-price">$110.000</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cta-wrap">
+      <span class="btn-cta">Ver todos los productos</span>
+    </div>
+  </div>
+</section>
+
+<!-- LIFESTYLE BANNER -->
+<section class="lifestyle-banner">
+  <img src="https://acdn-us.mitiendanube.com/stores/137/507/themes/new_linkedman/2-img-3978810387310792136-1775849710-89e65de1f25974af212c1668b5670e8c1775849711-1920-1920.webp?3441567124291976471" alt="Banner HILO argentina" loading="lazy"/>
+</section>
+
+<!-- INSTAGRAM — único enlace externo que se mantiene -->
+<section class="instagram-section">
+  <a href="https://instagram.com/hiloargentina" target="_blank" rel="noopener" aria-label="Instagram de HILO argentina">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    <div class="ig-text">
+      <div class="ig-label">Seguinos en Instagram</div>
+      <div class="ig-handle">@hiloargentina</div>
+    </div>
+  </a>
+</section>
+
+<!-- SERVICES STRIP -->
+<div class="services-strip">
+  <div class="services-inner">
+    <div class="service-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M624 368h-16V251.9c0-19-7.7-37.5-21.1-50.9L503 117.1C489.6 103.7 471 96 452.1 96H416V56c0-30.9-25.1-56-56-56H56C25.1 0 0 25.1 0 56v304c0 30.9 25.1 56 56 56h8c0 53 43 96 96 96s96-43 96-96h128c0 53 43 96 96 96s96-43 96-96h48c8.8 0 16-7.2 16-16v-16c0-8.8-7.2-16-16-16zm-464 96c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm208-96H242.7c-16.6-28.6-47.2-48-82.7-48s-66.1 19.4-82.7 48H56c-4.4 0-8-3.6-8-8V56c0-4.4 3.6-8 8-8h304c4.4 0 8 3.6 8 8v312zm48-224h36.1c6.3 0 12.5 2.6 17 7l73 73H416v-80zm64 320c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-100.9c-17.2-25.9-46.6-43.1-80-43.1-24.7 0-47 9.6-64 24.9V272h144v91.1z"/></svg>
+      <div class="service-text"><h3>Envíos a todo el país</h3><p>OCA</p></div>
+    </div>
+    <div class="service-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M527.9 32H48.1C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48.1 48h479.8c26.6 0 48.1-21.5 48.1-48V80c0-26.5-21.5-48-48.1-48zM54.1 80h467.8c3.3 0 6 2.7 6 6v42H48.1V86c0-3.3 2.7-6 6-6zm467.8 352H54.1c-3.3 0-6-2.7-6-6V256h479.8v170c0 3.3-2.7 6-6 6zM192 332v40c0 6.6-5.4 12-12 12h-72c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h72c6.6 0 12 5.4 12 12zm192 0v40c0 6.6-5.4 12-12 12H236c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h136c6.6 0 12 5.4 12 12z"/></svg>
+      <div class="service-text"><h3>Mercado Pago</h3></div>
+    </div>
+    <div class="service-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 192h-32v-46.6C368 65.8 304 .2 224.4 0 144.8-.2 80 64.5 80 144v48H48c-26.5 0-48 21.5-48 48v224c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V240c0-26.5-21.5-48-48-48zm-272-48c0-52.9 43.1-96 96-96s96 43.1 96 96v48H128v-48zm272 320H48V240h352v224z"/></svg>
+      <div class="service-text"><h3>Sitio seguro</h3></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-col">
+      <p class="footer-col-title">Navegación</p>
+      <ul>
+        <li><span>Inicio</span></li>
+        <li><span>Productos</span></li>
+        <li><span>Contacto</span></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-title">Medios de pago</p>
+      <div class="payment-logos">
+        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" alt="Visa" loading="lazy"/>
+        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" alt="Mastercard" loading="lazy"/>
+        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" alt="Amex" loading="lazy"/>
+        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png" alt="Diners" loading="lazy"/>
+        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png" alt="Cabal" loading="lazy"/>
+        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png" alt="Naranja" loading="lazy"/>
+        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-shopping@2x.png" alt="Shopping" loading="lazy"/>
+        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/maestro@2x.png" alt="Maestro" loading="lazy"/>
+        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visadebit@2x.png" alt="Visa Débito" loading="lazy"/>
+        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png" alt="Pago Fácil" loading="lazy"/>
+        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png" alt="Rapipago" loading="lazy"/>
+        <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/argencard@2x.png" alt="Argencard" loading="lazy"/>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-title">Contactanos</p>
+      <ul class="contact-list">
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476.5 22.9L382.3 1.2c-21.6-5-43.6 6.2-52.3 26.6l-43.5 101.5c-8 18.6-2.6 40.6 13.1 53.4l40 32.7C311 267.8 267.8 311 215.4 339.5l-32.7-40c-12.8-15.7-34.8-21.1-53.4-13.1L27.7 329.9c-20.4 8.7-31.5 30.7-26.6 52.3l21.7 94.2c4.8 20.9 23.2 35.5 44.6 35.5C312.3 512 512 313.7 512 67.5c0-21.4-14.6-39.8-35.5-44.6z"/></svg>
+          <!-- WhatsApp: enlace externo permitido -->
+          <a href="https://wa.me/5491128880161" target="_blank">Whatsapp +54 9 1128880161</a>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg>
+          <span>hilo.argentina@gmail.com</span>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg>
+          <span>French 3691, Palermo, CABA</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-title">Redes Sociales</p>
+      <div class="social-icons">
+        <!-- Instagram: enlace externo permitido -->
+        <a href="https://instagram.com/hiloargentina" target="_blank" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+        </a>
+        <a href="https://facebook.com/hiloargentina" target="_blank" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 68.2 2.5 76.2 3.6V85h-52.3c-41 0-49 19.5-49 48v63H264l-11.7 91H168.7V512z"/></svg>
+        </a>
+      </div>
+      <p class="footer-col-title" style="margin-top:8px;">Newsletter</p>
+      <form class="newsletter-form" onsubmit="return false;">
+        <input type="email" name="email" placeholder="Email" aria-label="Email"/>
+        <button type="submit">Suscribirse</button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 HILO argentina. Todos los derechos reservados.</span>
+    <span>Creado con Tiendanube</span>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT — enlace externo permitido -->
+<a class="whatsapp-btn" href="https://wa.me/5491128880161" target="_blank" aria-label="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+  new Swiper('.js-hero-swiper', {
+    loop: true,
+    speed: 600,
+    autoplay: { delay: 4500, disableOnInteraction: false },
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+  });
+</script>
+</body>
+</html>
